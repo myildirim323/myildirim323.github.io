@@ -1,0 +1,6 @@
+---
+title:  "Welcome to My Blog"
+date:  2019-03-03 15:18:23
+categories: [rails]
+tags: [rails]
+---
