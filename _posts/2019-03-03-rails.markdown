@@ -4,3 +4,22 @@ date:  2019-03-03 15:18:23
 categories: [rails]
 tags: [rails]
 ---
+
+Windows için Ruby On Rails Kurulumu ve Proje Yaratmak
+Windows'da Ruby On Rails Kurulumu için Rails Installer paket uygulamasını kuracağız. railsinstaller.org sitesinden Windows için sürümünü indirip kuruyoruz.
+
+Yükleme bittikten sonra Dos ekranına adınızı ve mail adresinizi girmeniz istenecek, kayıt için girdikten sonra C:\Sites> yazısı gelecektir. Aşağıdaki komutları sırasıyla girerek Ruby projenizi yaratabilirsiniz.
+
+1) rails new demosite
+2) cd demosite
+3) rails g scaffold post ad:string soyad:string (ad ve soyad olarak iki string oluşturuyoruz, Proje taslağı)
+4) rails g model comment deneme_id:integer ad:string soyad:string (3. kısımda yaptıklarımızı veritabanında tanımlamamız gerekir)
+5) rake db:migrate (satır ve sütunları oluşturup veritabanı ile birleştiririz)
+6) rails s
+
+yazarak browser'da http://localhost:3000/posts yazıp sitemizi lokal de açıyoruz. Ms-Dos ekranında sunucuyu kapatmak içinse Ctrl-C diyerek kapatabilirsiniz. Tekrar Ruby sunucusunu çalıştırmak için Ms-Dos ekranından C:\Sites içinde oluşturduğunuz projeye gelerek rails s komutu vermeniz yeterli.
+
+3. ve 4. kısımda sadece string değil sayı olarak integer ve uzun yazı girilecekse text değişkeni de verebiliriz.
+
+3) rails g scaffold post Ad:string Soyad:string Yas:integer Adres:text
+4) rails g model comment deneme_id:integer Ad:string Soyad:string Yas:integer Adres:text
